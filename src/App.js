@@ -1,13 +1,10 @@
 import "./App.css";
+import { Header } from "./components";
 
 function App() {
   return (
     <div className="App">
-      <header className="appHeader">
-        <h1>
-          Welcome to <span>Mocca.js</span>!
-        </h1>
-      </header>
+      <Header />
     </div>
   );
 }

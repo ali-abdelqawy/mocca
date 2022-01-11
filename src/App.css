@@ -1,5 +1,5 @@
 :root {
-  --white: #ffffff;
+  --white: #eee;
   --light-blue: #a9d6e5;
   --dark-sky-blue: #89c2d9;
   --maximum-blue: #61a5c2;
@@ -15,11 +15,14 @@
 .App {
   width: 100vw;
   height: 100vh;
+  background-color: var(--white);
 }
 
 .appHeader {
   display: flex;
   justify-content: center;
+  background-color: var(--prussian-blue);
+  color: var(--white);
 }
 
 .appHeader span {
