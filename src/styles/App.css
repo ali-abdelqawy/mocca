@@ -13,18 +13,60 @@
 }
 
 .App {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   width: 100vw;
   height: 100vh;
   background-color: var(--white);
 }
 
-.appHeader {
+.footer {
   display: flex;
   justify-content: center;
   background-color: var(--prussian-blue);
   color: var(--white);
 }
 
-.appHeader span {
+.footer span {
   text-decoration: underline;
+}
+
+.ingredientsList {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.ingredientContainer {
+  width: 12%;
+  margin-right: 10px;
+  border: 2px var(--prussian-blue) solid;
+  border-radius: 100px;
+  background-color: var(--light-blue);
+  cursor: pointer;
+}
+
+.ingredientContainer:hover {
+  background-color: var(--dark-sky-blue);
+}
+
+.ingredient {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.ingredientName {
+  margin: 5px 0 0 0;
+}
+
+.ingredientIcon {
+  width: 20%;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
 }

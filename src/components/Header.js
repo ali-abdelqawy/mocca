@@ -1,11 +1,9 @@
 import React from "react";
 
-export const Header = () => {
+export const Header = ({ text }) => {
   return (
-    <header className="appHeader">
-      <h1>
-        Welcome to <span>Mocca.js</span>!
-      </h1>
-    </header>
+    <div className="header">
+      <h1>{text}</h1>
+    </div>
   );
 };

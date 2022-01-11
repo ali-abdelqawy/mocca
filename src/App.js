@@ -1,10 +1,14 @@
 import "./styles/App.css";
-import { Header } from "./components";
+import { Footer, Header, IngredientsList } from "./components";
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      <div>
+        <Header text="What do you want to order?" />
+        <IngredientsList />
+      </div>
+      <Footer />
     </div>
   );
 }
