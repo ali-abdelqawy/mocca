@@ -1,3 +1,17 @@
+:root {
+  --white: #ffffff;
+  --light-blue: #a9d6e5;
+  --dark-sky-blue: #89c2d9;
+  --maximum-blue: #61a5c2;
+  --blue-green: #468faf;
+  --celadon-blue: #2c7da0;
+  --sapphire-blue: #2a6f97;
+  --usafa-blue: #014f86;
+  --indigo-dye: #01497c;
+  --dark-indigo-dye: #013a63;
+  --prussian-blue: #012a4a;
+}
+
 .App {
   width: 100vw;
   height: 100vh;
