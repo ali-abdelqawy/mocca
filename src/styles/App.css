@@ -18,7 +18,7 @@
   flex-direction: column;
   width: 100vw;
   height: 100vh;
-  background-color: var(--white);
+  color: var(--prussian-blue);
 }
 
 .footer {
@@ -26,6 +26,7 @@
   justify-content: center;
   background-color: var(--prussian-blue);
   color: var(--white);
+  max-width: 100%;
 }
 
 .footer span {
@@ -34,15 +35,17 @@
 
 .ingredientsList {
   display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   justify-content: center;
   list-style: none;
 }
 
 .ingredientContainer {
   display: flex;
-  width: 15%;
-  margin-right: 10px;
-  border: 2px var(--prussian-blue) solid;
+  min-width: 300px;
+  width: 300px;
+  border: 1px var(--prussian-blue) solid;
   background-color: var(--light-blue);
 }
 
@@ -55,7 +58,7 @@
 }
 
 .ingredientName {
-  margin: 10px 0;
+  margin: 5px 0;
   text-transform: uppercase;
 }
 
@@ -79,4 +82,20 @@
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
+  background: var(--usafa-blue);
+  color: white;
+  border-radius: 10px;
+}
+
+.button:disabled {
+  background-color: var(--blue-green);
+}
+
+.totalCaffeineContainer {
+  display: flex;
+  justify-content: center;
+  background-color: var(--light-blue);
+  width: 300px;
+  margin: 0 auto;
+  border: 1px var(--prussian-blue) solid;
 }
