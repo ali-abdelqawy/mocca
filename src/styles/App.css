@@ -60,6 +60,7 @@
 
 .ingredientName {
   margin: 5px 0 0 0;
+  text-transform: uppercase;
 }
 
 .ingredientIcon {
