@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button } from ".";
-export const IngredientCounter = ({ name, icon }) => {
+export const IngredientCounter = () => {
   const [counter, setCounter] = useState(0);
 
   return (
