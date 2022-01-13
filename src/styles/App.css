@@ -39,27 +39,23 @@
 }
 
 .ingredientContainer {
-  width: 12%;
+  display: flex;
+  width: 15%;
   margin-right: 10px;
   border: 2px var(--prussian-blue) solid;
-  border-radius: 100px;
   background-color: var(--light-blue);
-  cursor: pointer;
-}
-
-.ingredientContainer:hover {
-  background-color: var(--dark-sky-blue);
 }
 
 .ingredient {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: 10px 0;
 }
 
 .ingredientName {
-  margin: 5px 0 0 0;
+  margin: 10px 0;
   text-transform: uppercase;
 }
 
@@ -70,4 +66,17 @@
 .header {
   display: flex;
   justify-content: center;
+}
+
+.counter {
+  margin: 0 10px;
+}
+
+.button {
+  border: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
 }

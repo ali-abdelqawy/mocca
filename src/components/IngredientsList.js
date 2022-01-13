@@ -4,7 +4,7 @@ import { ingredients } from "../constants";
 
 export const IngredientsList = () => {
   const ingredientsList = ingredients.map((ingredient) => (
-    <li className="ingredientContainer">
+    <li className="ingredientContainer" key={ingredient.id}>
       <Ingredient {...ingredient} />
     </li>
   ));
