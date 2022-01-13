@@ -1,20 +1,27 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Button } from ".";
-export const IngredientCounter = () => {
+import { TotalCaffeineContext } from "../contexts/totalCaffeineContext";
+export const IngredientCounter = ({ caffeinePerShot }) => {
   const [counter, setCounter] = useState(0);
+  const { setTotalCaffeine } = useContext(TotalCaffeineContext);
+
+  const onDecrementClick = () => {
+    setCounter((prevState) => --prevState);
+    if (caffeinePerShot > 0)
+      setTotalCaffeine((prevState) => prevState - caffeinePerShot);
+  };
+
+  const onIncrementClick = () => {
+    setCounter((prevState) => ++prevState);
+    if (caffeinePerShot > 0)
+      setTotalCaffeine((prevState) => prevState + caffeinePerShot);
+  };
 
   return (
     <div>
-      <Button
-        title={"-"}
-        disabled={!counter}
-        onClick={() => setCounter((prevState) => --prevState)}
-      />
+      <Button title={"-"} disabled={!counter} onClick={onDecrementClick} />
       <span className="counter">{counter}</span>
-      <Button
-        title={"+"}
-        onClick={() => setCounter((prevState) => ++prevState)}
-      />
+      <Button title={"+"} onClick={onIncrementClick} />
     </div>
   );
 };
