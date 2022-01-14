@@ -17,8 +17,14 @@
   justify-content: space-between;
   flex-direction: column;
   width: 100vw;
+  max-width: 100%;
   height: 100vh;
   color: var(--prussian-blue);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
 }
 
 .footer {
@@ -39,10 +45,10 @@
   gap: 10px;
   justify-content: center;
   list-style: none;
+  padding: 0;
 }
 
 .ingredientContainer {
-  display: flex;
   min-width: 300px;
   width: 300px;
   border: 1px var(--prussian-blue) solid;
@@ -80,7 +86,6 @@
   padding: 8px 16px;
   font-size: 16px;
   margin: 4px 2px;
-  transition-duration: 0.4s;
   cursor: pointer;
   background: var(--usafa-blue);
   color: white;
@@ -96,6 +101,67 @@
   justify-content: center;
   background-color: var(--light-blue);
   width: 300px;
-  margin: 0 auto;
+  margin: 10px auto;
   border: 1px var(--prussian-blue) solid;
+}
+
+.addIngredient {
+  border: 1px var(--prussian-blue) solid;
+  width: 60%;
+  min-width: 300px;
+  margin: 10px auto;
+  background-color: var(--light-blue);
+}
+
+.addIngredientForm {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  gap: 10px;
+}
+
+.addIngredientForm input {
+  height: 30px;
+  font-size: 16px;
+  padding: 15px 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+input:focus {
+  outline: none !important;
+  border: 1px solid var(--prussian-blue);
+  box-shadow: 0 0 10px var(--light-blue);
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.largeButton {
+  margin: 10px auto;
+  width: 300px;
+  padding: 15px 10px;
+}
+
+table {
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+
+th,
+td {
+  border: 2px solid var(--prussian-blue);
+  padding: 5px 15px;
+}
+
+td {
+  background-color: var(--light-blue);
+}
+
+th {
+  background-color: var(--dark-indigo-dye);
+  color: var(--white);
 }

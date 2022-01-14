@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Ingredient } from "../components";
-import { ingredients } from "../constants";
+import { IngredientsListContext } from "../contexts";
 
 export const IngredientsList = () => {
-  const ingredientsList = ingredients.map((ingredient) => (
+  const { ingredientsList } = useContext(IngredientsListContext);
+  const ingredients = ingredientsList.map((ingredient) => (
     <li className="ingredientContainer" key={ingredient.id}>
       <Ingredient {...ingredient} />
     </li>
   ));
 
-  return <ul className="ingredientsList">{ingredientsList}</ul>;
+  return <ul className="ingredientsList">{ingredients}</ul>;
 };

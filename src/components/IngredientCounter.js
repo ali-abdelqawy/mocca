@@ -8,13 +8,17 @@ export const IngredientCounter = ({ caffeinePerShot }) => {
   const onDecrementClick = () => {
     setCounter((prevState) => --prevState);
     if (caffeinePerShot > 0)
-      setTotalCaffeine((prevState) => prevState - caffeinePerShot);
+      setTotalCaffeine(
+        (prevState) => parseInt(prevState) - parseInt(caffeinePerShot)
+      );
   };
 
   const onIncrementClick = () => {
     setCounter((prevState) => ++prevState);
     if (caffeinePerShot > 0)
-      setTotalCaffeine((prevState) => prevState + caffeinePerShot);
+      setTotalCaffeine(
+        (prevState) => parseInt(prevState) + parseInt(caffeinePerShot)
+      );
   };
 
   return (
